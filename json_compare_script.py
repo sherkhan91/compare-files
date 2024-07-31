@@ -1,5 +1,46 @@
 from itertools import zip_longest
 
+
+middle_permissions = [
+    {
+        "SubPage": {"Rule": False, "Data_New": True},
+        "SubPage_searc": {"MostRecentDocs": True, "AdvancedSearch": True, "DocumentTracking": True, "ReprocessFiles": True,
+                    "ResendFiles": True},
+        "Edit": {"NewSearch": True, "TrackDoc": True, "ShowRecent": True},
+        "Delete": {"AdvancedSearch": True, "DocumentTracking": True, "ShowRecent": True},
+        "Download": {"BasicSearch": True, "TrackDoc": True, "ShowRecent": True},
+        "Report": {"MySearch": False},
+        "DocLog": {"AdvancedSearch": True, "DocumentTracking": True, "ShowRecent": True},
+        "Resend_Reprocess_Files": {"AdvancedSearch": True, "DocumentTracking": True, "ShowRecent": True}
+    },
+    {},
+    {"MainPage": {"Dashboard": False},
+        "SubPage": {"DayToDaySupport": True, "Analytics": True,
+                                                    "CustomerCare": True, "SalesExecutive": True}, "Edit": {},
+        "Delete": {}, "Download": {}, "Report": {}, "Document_Trail": {},
+                                        "Resend_Reprocess_Files": {}},
+    {
+    "MainPage": {"Partners": True},
+     "Edit": {"SaleRelations": True},
+     "Delete": {"TradingRelationships": True},
+     "Download": {"TradingRelationships": True},
+     "Report": {}, "DocumentLog": {},
+     "Resend_Reprocess_Files": {}
+     },
+    {"MainPage": {"Analytics": True},
+     "SubPage": {"TradingPartnersSummary": True, "Analytics": True, "document-summary": True, "TransactionAck": True},
+     "Edit": {}, "Delete": {},
+     "Download": {"Analytics": True, "document-summary": True, "TradingPartnersSummary": True, "TransactionAck": True},
+     "Report": {}, "Document_Trail": {}, "Resend_Reprocess_Files": {}},
+    {"MainPage": {"SLAManagement": True},
+     "SubPage": {"TransactionOverdue": True, "TransactionalSLA": True},
+     "Delete": {"TransactionalSLA": True},
+     "Download": {},
+     "Analysis": {"TransactionalSLA": True},
+     "DocLog": {},
+     "Resend_Reprocess_Files": {}}
+]
+
 existing_permissions = [
     {
         "MainPage": {"Data": False, "Data_New": True},
